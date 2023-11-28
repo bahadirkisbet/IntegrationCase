@@ -9,6 +9,12 @@ public abstract class Program
         var service = new ItemIntegrationService();
         
         ThreadPool.QueueUserWorkItem(_ => service.SaveItem("a"));
+        ThreadPool.QueueUserWorkItem(_ => service.SaveItem("a"));
+        ThreadPool.QueueUserWorkItem(_ => service.SaveItem("a"));
+        ThreadPool.QueueUserWorkItem(_ => service.SaveItem("a"));
+        ThreadPool.QueueUserWorkItem(_ => service.SaveItem("b"));
+        ThreadPool.QueueUserWorkItem(_ => service.SaveItem("c"));
+        ThreadPool.QueueUserWorkItem(_ => service.SaveItem("b"));
         ThreadPool.QueueUserWorkItem(_ => service.SaveItem("b"));
         ThreadPool.QueueUserWorkItem(_ => service.SaveItem("c"));
 
