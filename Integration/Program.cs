@@ -6,7 +6,7 @@ public abstract class Program
 {
     public static void Main(string[] args)
     {
-        var service = new ItemIntegrationService();
+        var service = new DistributedItemIntegrationService();
         
         ThreadPool.QueueUserWorkItem(_ => service.SaveItem("a"));
         ThreadPool.QueueUserWorkItem(_ => service.SaveItem("a"));

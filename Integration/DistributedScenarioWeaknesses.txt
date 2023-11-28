@@ -1,0 +1,15 @@
+In this distributed scenario, we could face some issues:
+
+1- Network latency: The network latency between the two server and cache could be high for some reason, and this could affect the performance and the accuracy of the application.
+In order to solve it, we could deploy those two at the same region. However, in this case, regional failure could affect the application.
+
+2- Cache synchronization: The cache could be out of sync for some reason, and this could affect the performance and the accuracy of the application.
+In order to solve it, we could use a distributed cache like Redis, and we could use a master-slave configuration. Again, in this case, the master could be down and the slave could be out of sync for some time.
+
+3- Cache size: The cache size could be too big for the server memory, and this could affect the performance and the accuracy of the application.
+
+4- Network Overloading: The network traffic for the cache could be too high. In order to avoid it, we could use a load balancer that has scalability over instance count for the cache.
+However, this may lead us to the second issue. On the other hand, that is still good because we could have a better performance and accuracy for the application.
+
+5- Configuration: We don't want to have it publicly accessible. In order to solve it, we need to set up a some sort of VPN or subnet within private network.
+In general, the configuration of those choices may cost a serious amount of development time.
